@@ -28,6 +28,7 @@ em,i,u {font-style: normal}
 
 .hide {display: none}
 
+/* 清除浮动 */
 .clear,
 .clr {
     display: block;
@@ -118,7 +119,7 @@ a:hover {
 
 .m,.mb,.mc,.mt,.sm,.smb,.smc,.smt {overflow: hidden;zoom: 1}
 
-
+/* 流式布局 */
 .flex { display: -webkit-box;   display: -webkit-flex;  display: flex; }
 .flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
 .flex-f1 { -webkit-flex: 1; -ms-flex: 1; flex: 1;}
@@ -211,8 +212,7 @@ a:hover {
 .bd {border: 1px solid #7d7d7d;}
 .bdb1 {border-bottom: 1px solid #dcdcdc;}
 
-
-
+/* 阴影 */
 .box-shadow{
      /*Firefox4.0-*/
      -moz-box-shadow:0 2px 8px 1px rgba(0,0,0,.35);
@@ -221,9 +221,21 @@ a:hover {
      /*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9*/
      box-shadow:  0 2px 8px 1px rgba(0,0,0,.35);
 }
-.bdra {
-    border-radius: 10px;
+.bdra10 {border-radius: 10px;}
+
+/* 占满父盒子，父盒子需定位 */
+.fullbox{position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
+
+/* 隐藏滚动条 */
+.noScrollBar {
+	/*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+	-ms-overflow-style:none;
+	/*火狐下隐藏滚动条*/
+	overflow:-moz-scrollbars-none;
 }
+.noScrollBar::-webkit-scrollbar{display:none;}
+
+/* 流媒体 */
 @media screen and (min-width:300px) and (max-width:360px) {}
 
 
