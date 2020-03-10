@@ -14,6 +14,8 @@ ol,ul {list-style: none}
 
 img {border: 0;vertical-align: middle}
 
+img,audio,video {max-width: 100%;display: inline-block;}
+
 em,i,u {font-style: normal}
 
 .fl {float: left}
