@@ -54,9 +54,7 @@ em,i,u {font-style: normal}
 
 .clearfix {*zoom: 1}
 
-.dorpdown {
-    position: relative
-}
+.dorpdown {position: relative;}
 
 .dorpdown-layer {
     display: none;
