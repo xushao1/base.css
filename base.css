@@ -56,10 +56,7 @@ em,i,u {font-style: normal}
 
 .dorpdown {position: relative}
 
-.dorpdown-layer {
-    display: none;
-    position: absolute
-}
+.dorpdown-layer {display: none;position: absolute;}
 
 .dorpdown:hover .dorpdown-layer,
 .hover .dorpdown-layer {
