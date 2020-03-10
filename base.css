@@ -34,6 +34,8 @@ em,i,u {font-style: normal}
 
 .poa {position: absolute;}
 
+.pof {position: fixed;}
+
 .l0 {left: 0;}.l5 {left: 5px;}.l10 {left: 10px;}.l15 {left: 15px;}.l20 {left: 20px;}.l25 {left: 25px;}.l30 {left: 30px;}.l35 {left: 35px;}.l40 {left: 40px;}.l45 {left: 45px;}.l50 {left: 50px;}
 
 .r0 {right: 0;}.r5 {right: 5px;}.r10 {right: 10px;}.r15 {right: 15px;}.r20 {right: 20px;}.r25 {right: 25px;}.r30 {right: 30px;}.r35 {right: 35px;}.r40 {right: 40px;}.r45 {right: 45px;}.r50 {right: 50px;}
@@ -249,9 +251,9 @@ a {color: #666;text-decoration: none}
      /*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9*/
      box-shadow:  0 2px 8px 1px rgba(0,0,0,.35);
 }
-.bdra {
-    border-radius: 10px;
-}
+
+.bdra10 {border-radius: 10px;}
+
 @media screen and (min-width:300px) and (max-width:360px) {}
 
 
