@@ -10,6 +10,11 @@ button[disabled],html input[disabled] {cursor: default;outline: none;}
 
 textarea {resize: none;}
 
+/* input[type="number"] 去掉增加减少按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none;}
+input[type="number"]{-moz-appearance: textfield;}
+
 ol,ul {list-style: none}
 
 img {border: 0;vertical-align: middle}
@@ -148,47 +153,6 @@ img,audio,video {display: inline-block;max-width: 100%;}
 .flex-cobe { -webkit-align-content: space-between; -ms-align-content: space-between; align-content: space-between;}
 
 
-/*渐变  深黄 到 浅黄 */
-
-.bgcl {
-    /*css3 背景渐变*/
-    background: -webkit-linear-gradient(180deg, #11b4fb, #006597);
-    /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(180deg, #11b4fb, #006597);
-    /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(180deg, #11b4fb, #006597);
-    /* Firefox 3.6 - 15 */
-    background: linear-gradient(180deg, #11b4fb, #006597);
-    /* 标准的语法 */
-}
-/*primary*/
-.bgcb {background-color: #2c2c9f;}
-.bgcp {background-color: #6529a4;}
-.bgcf {background-color: #fff;}
-.bgcg {background-color: #eee;}
-
-
-
-/*color*/
-.col_g {color: #3fcb5e !important;}
-.col_b {color: #2c2c9f !important;}
-.col_r {color: #ee0027 !important;}
-.col_p {color: #6529a4 !important;}
-.col_y {color: #f0f900 !important;}
-.col_w {color: #fff !important;}
-
-.col3 {color: #333;}
-.col6 {color: #666;}
-.col9 {color: #999;}
-
-.lh1 {line-height: 1;}
-.lh1.5 {line-height: 1.5;}
-.lh2 {line-height: 2;}
-.lh3 {line-height: 3;}
-.lh4 {line-height: 4;}
-.lh5 {line-height: 5;}
-.lh6 {line-height: 6;}
-
 .h0 {height: 0;}.h1 {height: 10%;}.h2 {height: 20%;}.h3 {height: 30%;}.h4 {height: 40%;}.h5 {height: 50%;}.h6 {height: 60%;}.h7 {height: 70%;}.h8 {height: 80%;}.h9 {height: 90%;}.h10 {height: 100%;}
 .h20 {height: 20px;}.h30 {height: 30px;}.h40 {height: 40px;}.h50 {height: 50px;}.h60 {height: 60px;}.h70 {height: 70px;}.h80 {height: 80px;}.h90 {height: 90px;}.h100 {height: 100px;}.h110 {height: 110px;}.h120 {height: 120px;}.h130 {height: 130px;}.h140 {height: 140px;}.h150 {height: 150px;}.h160 {height: 160px;}.h170 {height: 170px;}.h180 {height: 180px;}.h190 {height: 190px;}.h200 {height: 200px;}.h210 {height: 210px;}.h220 {height: 220px;}.h230 {height: 230px;}.h240 {height: 240px;}.h250 {height: 250px;}.h260 {height: 260px;}.h270 {height: 270px;}.h280 {height: 280px;}.h290 {height: 290px;}.h300 {height: 300px;}.h350 {height: 350px;}.h400 {height: 400px;}.h450 {height: 450px;}.h500 {height: 500px;}.h550 {height: 550px;}.h600 {height: 600px;}.h650 {height: 650px;}.h700 {height: 700px;}.h750 {height: 750px;}.h800 {height: 800px;}.h850 {height: 850px;}.h900 {height: 900px;}.h950 {height: 950px;}.h1000 {height: 1000px;}
 
@@ -230,6 +194,46 @@ img,audio,video {display: inline-block;max-width: 100%;}
 /*padding-left*/
 .pl5 {padding-left: 5px;}.pl10 {padding-left: 10px;}.pl15 {padding-left: 15px;}.pl20 {padding-left: 20px;}.pl25 {padding-left: 25px;}.pl30 {padding-left: 30px;}.pl35 {padding-left: 35px;}.pl40 {padding-left: 40px;}.pl45 {padding-left: 45px;}.pl50 {padding-left: 50px;}.pl55 {padding-left: 55px;}.pl60 {padding-left: 60px;}.pl65 {padding-left: 65px;}.pl70 {padding-left: 70px;}.pl75 {padding-left: 75px;}.pl80 {padding-left: 80px;}.pl85 {padding-left: 85px;}.pl90 {padding-left: 90px;}.pl95 {padding-left: 95px;}.pl100 {padding-left: 100px;}
 
+
+/*渐变  深黄 到 浅黄 */
+
+.bgcl {
+    /*css3 背景渐变*/
+    background: -webkit-linear-gradient(180deg, #11b4fb, #006597);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, #11b4fb, #006597);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, #11b4fb, #006597);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, #11b4fb, #006597);
+    /* 标准的语法 */
+}
+/*primary*/
+.bgcb {background-color: #2c2c9f;}
+.bgcp {background-color: #6529a4;}
+.bgcf {background-color: #fff;}
+.bgcg {background-color: #eee;}
+
+
+/*color*/
+.col_g {color: #3fcb5e !important;}
+.col_b {color: #2c2c9f !important;}
+.col_r {color: #ee0027 !important;}
+.col_p {color: #6529a4 !important;}
+.col_y {color: #f0f900 !important;}
+.col_w {color: #fff !important;}
+
+.col3 {color: #333;}
+.col6 {color: #666;}
+.col9 {color: #999;}
+
+.lh1 {line-height: 1;}
+.lh1.5 {line-height: 1.5;}
+.lh2 {line-height: 2;}
+.lh3 {line-height: 3;}
+.lh4 {line-height: 4;}
+.lh5 {line-height: 5;}
+.lh6 {line-height: 6;}
 
 .m0    {margin: 0 !important;}
 .p0    {padding: 0 !important;}
