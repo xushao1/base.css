@@ -313,9 +313,23 @@ img,audio,video {display: inline-block;max-width: 100%;}
      box-shadow:  0 2px 8px 1px rgba(0,0,0,.35);
 }
 
-.bdra10 {
-    border-radius: 10px;
-}
+.bdra2 {border-radius: 2px;}
+.bdra3 {border-radius: 3px;}
+.bdra4 {border-radius: 4px;}
+.bdra5 {border-radius: 5px;}
+.bdra6 {border-radius: 6px;}
+.bdra8 {border-radius: 8px;}
+.bdra10 {border-radius: 10px;}
+.bdra12 {border-radius: 12px;}
+.bdra14 {border-radius: 14px;}
+.bdra15 {border-radius: 15px;}
+.bdra18 {border-radius: 18px;}
+.bdra20 {border-radius: 20px;}
+.bdra22 {border-radius: 22px;}
+.bdra24 {border-radius: 24px;}
+.bdra25 {border-radius: 25px;}
+.bdra50 {border-radius: 50%;}
+
 @media screen and (min-width:300px) and (max-width:360px) {}
 
 
