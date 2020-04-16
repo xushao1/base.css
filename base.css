@@ -228,12 +228,23 @@ img,audio,video {display: inline-block;max-width: 100%;}
 .col9 {color: #999;}
 
 .lh1 {line-height: 1;}
-.lh1.5 {line-height: 1.5;}
+.lh1_5 {line-height: 1.5;}
 .lh2 {line-height: 2;}
+.lh2_5 {line-height: 2.5;}
 .lh3 {line-height: 3;}
+.lh3_5 {line-height: 3.5;}
 .lh4 {line-height: 4;}
+.lh4_5 {line-height: 4.5;}
 .lh5 {line-height: 5;}
-.lh6 {line-height: 6;}
+.lh5_5 {line-height: 5.5;}
+
+.ti1 {text-indent: 1em;}
+.ti2 {text-indent: 2em;}
+.ti3 {text-indent: 3em;}
+.ti4 {text-indent: 4em;}
+.ti5 {text-indent: 5em;}
+.ti6 {text-indent: 6em;}
+.ti999 {text-indent: -99999em;}
 
 .m0    {margin: 0 !important;}
 .p0    {padding: 0 !important;}
