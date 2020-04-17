@@ -37,6 +37,21 @@ iframe {border: 0;}
 
 .hide {display: none}
 
+.show, .db {display: block}
+
+.dib {display: inline-block;}
+
+.op0 {opacity: 0;filter:alpha(opacity=0); /* 针对 IE8 以及更早的版本 */}
+.op1 {opacity: 0.1;filter:alpha(opacity=10);}
+.op2 {opacity: 0.2;filter:alpha(opacity=20);}
+.op3 {opacity: 0.3;filter:alpha(opacity=30);}
+.op4 {opacity: 0.4;filter:alpha(opacity=40);}
+.op5 {opacity: 0.5;filter:alpha(opacity=50);}
+.op6 {opacity: 0.6;filter:alpha(opacity=60);}
+.op7 {opacity: 0.7;filter:alpha(opacity=70);}
+.op8 {opacity: 0.8;filter:alpha(opacity=80);}
+.op9 {opacity: 0.9;filter:alpha(opacity=90);}
+
 .por {position: relative;}
 
 .poa {position: absolute;}
