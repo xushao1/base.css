@@ -69,6 +69,8 @@ iframe {border: 0;}
 /* bottom */
 .b-10 {bottom: -10px;}.b-9 {bottom: -9px;}.b-8 {bottom: -8px;}.b-7 {bottom: -7px;}.b-6 {bottom: -6px;}.b-5 {bottom: -5px;}.b-4 {bottom: -4px;}.b-3 {bottom: -3px;}.b-2 {bottom: -2px;}.b-1 {bottom: -1px;}.b0 {bottom: 0;}.b1 {bottom: 1px;}.b2 {bottom: 2px;}.b3 {bottom: 3px;}.b4 {bottom: 4px;}.b5 {bottom: 5px;}.b6 {bottom: 6px;}.b7 {bottom: 7px;}.b8 {bottom: 8px;}.b9 {bottom: 9px;}.b10 {bottom: 10px;}.b15 {bottom: 15px;}.b20 {bottom: 20px;}.b25 {bottom: 25px;}.b30 {bottom: 30px;}.b35 {bottom: 35px;}.b40 {bottom: 40px;}.b45 {bottom: 45px;}.b50 {bottom: 50px;}.ba {bottom: auto !important;}
 
+.z-1 {z-index: -1;}.z0 {z-index: 0 !important;}.z1 {z-index: 1;}.z2 {z-index: 2;}.z3 {z-index: 3;}.z4 {z-index: 4;}.z5 {z-index: 5;}.z6 {z-index: 6;}.z7 {z-index: 7;}.z8 {z-index: 8;}.z9 {z-index: 9;}.z10 {z-index: 10;}.z20 {z-index: 20;}.z50 {z-index: 50;}.z100 {z-index: 100;}.z1000 {z-index: 1000;}.z10000 {z-index: 10000;}
+
 .ovh {overflow: hidden;}.ova {overflow: auto;}.ovya {overflow-y: auto;}.ovxa {overflow-x: auto;}
 
 .clear,.clr {display: block;overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0}
