@@ -23,6 +23,10 @@ img {border: 0;vertical-align: middle;object-fit: contain;}
 
 iframe {border: 0;}
 
+.curp {cursor: pointer;}
+
+.curm {cursor: move;}
+
 .fl {float: left}
 
 .fr {float: right}
@@ -56,6 +60,10 @@ iframe {border: 0;}
 .por {position: relative;}
 
 .poa {position: absolute;}
+
+.pof {position: fixed;}
+
+.pos {position: static;}
 
 /* left */
 .l-10 {left: -10px;}.l-9 {left: -9px;}.l-8 {left: -8px;}.l-7 {left: -7px;}.l-6 {left: -6px;}.l-5 {left: -5px;}.l-4 {left: -4px;}.l-3 {left: -3px;}.l-2 {left: -2px;}.l-1 {left: -1px;}.l0 {left: 0;}.l1 {left: 1px;}.l2 {left: 2px;}.l3 {left: 3px;}.l4 {left: 4px;}.l5 {left: 5px;}.l6 {left: 6px;}.l7 {left: 7px;}.l8 {left: 8px;}.l9 {left: 9px;}.l10 {left: 10px;}.l15 {left: 15px;}.l20 {left: 20px;}.l25 {left: 25px;}.l30 {left: 30px;}.l35 {left: 35px;}.l40 {left: 40px;}.l45 {left: 45px;}.l50 {left: 50px;}.la {left: auto !important;}
