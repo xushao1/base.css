@@ -1,0 +1,112 @@
+// global less
+
+// Variables color
+@col-g: #3fcb5e; //green
+@col-b: #2c2c9f; //blue
+@col-sb: #30abf1; //skyblue
+@col-r: #ee0027; //red
+@col-p: #6529a4; //pueple
+@col-y: #f0f900; //yellow
+@col-w: #fff; //white
+@col-o: #ff6001; //orange
+
+@col0: #000;
+@col3: #333;
+@col6: #666;
+@col9: #999;
+@colc: #ccc;
+
+// Usage
+// a{ color: @col_g; }
+
+
+
+
+
+// Variables common css
+// text-overflow:ellipsis
+.txtov(@line: 1) {
+	display: -webkit-box;
+	overflow: hidden; 
+	text-overflow:ellipsis;
+	word-break:break-all;
+	-webkit-box-orient:vertical;
+	/* white-space:nowrap; */
+	-webkit-line-clamp: @line;
+}
+
+// border-radius
+.bdra(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// t = boder-type, w = border-width, s = border-solid, c = border-color
+.bd(@t: border, @w: 1px, @s: solid, @c: #bbb ) { @{t}: @w @s @c; }
+// .bd {border: 4px solid red;}
+
+.flex { display: -webkit-box;   display: -webkit-flex;  display: flex; }
+.flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
+.flex-f(@flex: 1) { -webkit-flex: @flex; -ms-flex: @flex; flex: @flex;}
+.flex-wrap { -webkit-box-lines: multiple;-moz-box-lines: multiple;-webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;}
+
+/*主轴 对齐方式  flex-start（默认值） | flex-end | center | space-between | space-around*/ 
+.flex-ju(@justify-content: space-between) { -webkit-justify-content: @justify-content; -ms-justify-content: @justify-content; justify-content: @justify-content;}
+
+/*单元素垂直分布  flex-start | flex-end | center | baseline | stretch（默认值）*/
+.flex-it(@align-items: center) { -webkit-align-items: @align-items; -ms-align-items: @align-items; align-items: @align-items;}
+
+/* 多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用  flex-start | flex-end | center | space-between | space-around | stretch（默认值）*/
+.flex-co(@align-content: center) { -webkit-align-content: @align-content; -ms-align-content: @align-content; align-content: @align-content;}
+
+
+// Usage
+// a{ .txtOv(@line: 2); }
+
+
+
+
+
+
+// Variables URLs
+@images: "../image";
+
+// Usage
+// body { background: url("@{images}/body-background.png"); }
+
+
+
+
+
+// Import styles from other style sheets
+/* import baseless */
+// @import "baseless.less";
+
+
+
+
+
+// Recursive Mixins
+// .loop(4);
+
+// .loop(@n, @i: 1) when (@i =< @n) {
+//   .width-@{i} {
+//     width: (@i * 100% / @n);
+//   }
+//   .loop(@n, (@i + 1));
+// }
+
+// Output:
+// .column-1 {
+//   width: 25%;
+// }
+// .column-2 {
+//   width: 50%;
+// }
+// .column-3 {
+//   width: 75%;
+// }
+// .column-4 {
+//   width: 100%;
+// }
