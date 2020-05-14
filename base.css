@@ -160,21 +160,101 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 .m,.mb,.mc,.mt,.sm,.smb,.smc,.smt {overflow: hidden;zoom: 1}
 
 
-.flex { display: -webkit-box;   display: -webkit-flex;  display: -ms-flexbox;  display: flex; }
+.flex {
+	display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: -moz-flex;
+	display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+	display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+	display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+	display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+ }
 .flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
-.flex-f1 { -webkit-flex: 1; -ms-flex: 1; flex: 1;}
-.flex-wrap { -webkit-box-lines: multiple;-moz-box-lines: multiple;-webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;}
+.flex1 { 
+	-webkit-flex: 1;  	 	/* Chrome */  
+	-ms-flex: 1;    		/* IE 10 */  
+	flex: 1;    			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-box-flex: 1;    /* OLD - iOS 6-, Safari 3.1-6 */  
+	-moz-box-flex: 1;    	/* OLD - Firefox 19- */     
+}
+.flex-wrap { 
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap: wrap; 
+	-ms-flex-wrap: wrap; 
+	-o-flex-wrap: wrap; 
+	flex-wrap:wrap;
+	-webkit-box-lines:multiple; /*Safari,Opera,Chrome*/
+	-moz-box-lines:multiple; /*Firefox*/
+	box-lines:multiple;
+}
+
 /*主轴 对齐方式 flex-start（默认值） | flex-end | center | space-between | space-around*/
-.flex-just { -webkit-justify-content: flex-start; -ms-justify-content: flex-start; justify-content: flex-start;}
-.flex-juce { -webkit-justify-content: center; -ms-justify-content: center; justify-content: center;}
+.flex-just { 
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	justify-content: flex-start;
+	-moz-box-pack: start; /*Firefox*/
+	-webkit-box-pack: start; /*Safari,Opera,Chrome*/
+	box-pack: start;
+}
+.flex-juce { 
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-box-pack: center; /*Safari,Opera,Chrome*/
+	-moz-box-pack: center; /*Firefox*/
+	box-pack: center;
+}
 .flex-juar { -webkit-justify-content: space-around; -ms-justify-content: space-around; justify-content: space-around;}
-.flex-jube { -webkit-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between;}
-.flex-juen { -webkit-justify-content: flex-end; -ms-justify-content: flex-end; justify-content: flex-end;}
+.flex-jube {
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-pack: justify; /*Safari,Opera,Chrome*/
+	-moz-box-pack: justify; /*Firefox*/
+	box-pack: justify;
+}
+.flex-juen { 
+	-webkit-justify-content: flex-end;
+	-moz-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;
+	-webkit-box-pack: end; /*Safari,Opera,Chrome*/
+	-moz-box-pack: end; /*Firefox*/
+	box-pack: end;
+}
 /*交叉轴 对齐方式 flex-start | flex-end | center | baseline | stretch（默认值）*/
-.flex-itce { -webkit-align-items: center; -ms-align-items: center; align-items: center;}
+.flex-itst { 
+	-webkit-align-items: flex-start;
+	-moz-align-items: flex-start;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	-webkit-box-align: start; /*Safari,Opera,Chrome*/
+	-moz-box-align: start; /*Firefox*/
+	box-align: start;
+}
+.flex-itce { 
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-box-align: center; /*Safari,Opera,Chrome*/
+	-moz-box-align: center; /*Firefox*/
+	box-align: center;
+}
 .flex-itar { -webkit-align-items: space-around; -ms-align-items: space-around; align-items: space-around;}
 .flex-itbe { -webkit-align-items: space-between; -ms-align-items: space-between; align-items: space-between;}
-.flex-itend { -webkit-align-items: flex-end; -ms-align-items: flex-end; align-items: flex-end;}
+.flex-itend {
+	-webkit-align-items: flex-end;
+	-moz-align-items: flex-end;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	-webkit-box-align: end; /*Safari,Opera,Chrome*/
+	-moz-box-align: end; /*Firefox*/
+	box-align: end;
+}
 
 /* 多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用  flex-start | flex-end | center | space-between | space-around | stretch（默认值）*/
 .flex-cost { -webkit-align-content: flex-start; -ms-align-content: flex-start; align-content: flex-start;}
@@ -249,15 +329,15 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 
 .col-skyblue {color: #30abf1;}
 .col-blue {color: #007bff;}
-.col-indigo {color: #6610f2;}
+.col-indigo {color: #6610f2;} /* 靛蓝 */
 .col-purple {color: #6f42c1;}
 .col-pink {color: #e83e8c;}
 .col-red {color: #dc3545;}
 .col-orange {color: #fd7e14;}
 .col-yellow {color: #ffc107;}
 .col-green {color: #28a745;}
-.col-teal {color: #20c997;}
-.col-cyan {color: #17a2b8;}
+.col-teal {color: #20c997;} /* 墨绿 */
+.col-cyan {color: #17a2b8;} /* 蓝绿 青色 */
 .col-white {color: #fff;}
 .col-gray {color: #6c757d;}
 .col-gray-dark {color: #343a40;}
