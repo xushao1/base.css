@@ -1,14 +1,21 @@
 // global less
 
 // Variables color
-@col-g: #3fcb5e; //green
-@col-b: #2c2c9f; //blue
-@col-sb: #30abf1; //skyblue
-@col-r: #ee0027; //red
-@col-p: #6529a4; //pueple
-@col-y: #f0f900; //yellow
-@col-w: #fff; //white
-@col-o: #ff6001; //orange
+
+@col-skyblue: #30abf1; //skyblue
+@col-blue #007bff;
+@col-indigo #6610f2;
+@col-purple #6f42c1;
+@col-pink #e83e8c;
+@col-red #dc3545;
+@col-orange #fd7e14;
+@col-yellow #ffc107;
+@col-green #28a745;
+@col-teal #20c997;
+@col-cyan #17a2b8;
+@col-white #fff;
+@col-gray #6c757d;
+@col-gray-dark #343a40;
 
 @col0: #000;
 @col3: #333;
@@ -49,6 +56,7 @@
 .flex { display: -webkit-box;   display: -webkit-flex;  display: -ms-flexbox;  display: flex; }
 .flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
 .flex-f(@flex: 1) { -webkit-flex: @flex; -ms-flex: @flex; flex: @flex;}
+.order(@order: 1) { -webkit-flex: @order;-ms-flex-order: @order; -ms-flex: @order; flex: @order;}
 .flex-wrap { -webkit-box-lines: multiple;-moz-box-lines: multiple;-webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;}
 
 /*主轴 对齐方式  flex-start（默认值） | flex-end | center | space-between | space-around*/ 

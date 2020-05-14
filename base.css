@@ -239,23 +239,34 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
     /* 标准的语法 */
 }
 /*primary*/
-.bgcb {background-color: #2c2c9f !important;}
-.bgcp {background-color: #6529a4 !important;}
+.bgcb {background-color: #007bff !important;}
+.bgcp {background-color: #6f42c1 !important;}
 .bgcf {background-color: #fff !important;}
-.bgcg {background-color: #eee !important;}
+.bgcg {background-color: #6c757d !important;}
 
 
 /*color*/
-.colg {color: #3fcb5e !important;}
-.colb {color: #2c2c9f !important;}
-.colr {color: #ee0027 !important;}
-.colp {color: #6529a4 !important;}
-.coly {color: #f0f900 !important;}
-.colw {color: #fff !important;}
 
+.col-skyblue {color: #30abf1;}
+.col-blue {color: #007bff;}
+.col-indigo {color: #6610f2;}
+.col-purple {color: #6f42c1;}
+.col-pink {color: #e83e8c;}
+.col-red {color: #dc3545;}
+.col-orange {color: #fd7e14;}
+.col-yellow {color: #ffc107;}
+.col-green {color: #28a745;}
+.col-teal {color: #20c997;}
+.col-cyan {color: #17a2b8;}
+.col-white {color: #fff;}
+.col-gray {color: #6c757d;}
+.col-gray-dark {color: #343a40;}
+
+.col0 {color: #000 !important;}
 .col3 {color: #333 !important;}
 .col6 {color: #666 !important;}
 .col9 {color: #999 !important;}
+.colc {color: #ccc !important;}
 
 .lh1 {line-height: 1;}
 .lh1_5 {line-height: 1.5;}
