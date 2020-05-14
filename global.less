@@ -46,7 +46,7 @@
 .bd(@t: border, @w: 1px, @s: solid, @c: #bbb ) { @{t}: @w @s @c; }
 // .bd {border: 4px solid red;}
 
-.flex { display: -webkit-box;   display: -webkit-flex;  display: flex; }
+.flex { display: -webkit-box;   display: -webkit-flex;  display: -ms-flexbox;  display: flex; }
 .flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
 .flex-f(@flex: 1) { -webkit-flex: @flex; -ms-flex: @flex; flex: @flex;}
 .flex-wrap { -webkit-box-lines: multiple;-moz-box-lines: multiple;-webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;}
