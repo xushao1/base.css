@@ -15,6 +15,15 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {-webkit-appearance: none;}
 input[type="number"]{-moz-appearance: textfield;}
 
+/* 禁止用户选择文本 */
+.noSelect { 
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 ol,ul {list-style: none}
 
 img {border: 0;vertical-align: middle;object-fit: contain;}
@@ -83,7 +92,7 @@ iframe {border: 0;}
 
 .clear,.clr {display: block;overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0}
 
-.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;overflow: hidden;visibility: hidden}
 
 .clearfix {*zoom: 1}
 
@@ -159,23 +168,68 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 
 .m,.mb,.mc,.mt,.sm,.smb,.smc,.smt {overflow: hidden;zoom: 1}
 
-
-.flex {
-	display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
-    display: -moz-flex;
-	display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+/* 定义 flex */
+.flex { 
 	display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+	
+	display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+	display: -moz-flex;
+	display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+	
 	display: -moz-box;      /* 老版本语法: Firefox (buggy) */
 	display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+	display: flexbox;
+	display: box;           /* OLD - Android 4.4- */ 
  }
-.flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
-.flex1 { 
+.flex-vertical { 
+	/* -webkit-box-orient: vertical;
+	-webkit-flex-flow: column;
+	flex-flow: column; */
+	
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-moz-box-orient: vertical;
+}
+
+.flex-f1 { 
 	-webkit-flex: 1;  	 	/* Chrome */  
 	-ms-flex: 1;    		/* IE 10 */  
 	flex: 1;    			/* NEW, Spec - Opera 12.1, Firefox 20+ */
 	-webkit-box-flex: 1;    /* OLD - iOS 6-, Safari 3.1-6 */  
 	-moz-box-flex: 1;    	/* OLD - Firefox 19- */     
+	box-flex: 1;
+	width: 20%;             /* For old syntax, otherwise collapses. */
 }
+.flex-fAu { 
+	-webkit-flex: auto;  	/* Chrome */  
+	-ms-flex: auto;    		/* IE 10 */  
+	flex: auto;    			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */  
+	-moz-box-flex: 1;    /* OLD - Firefox 19- */     
+}
+.flex-fInit { 
+	-webkit-flex: initial;  	/* Chrome */  
+	-ms-flex: initial;    		/* IE 10 */  
+	flex: initial;    			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-box-flex: initial;  /* OLD - iOS 6-, Safari 3.1-6 */  
+	-moz-box-flex: initial;    	/* OLD - Firefox 19- */     
+}
+
+/* 项目的排列顺序。数值越小，排列越靠前，默认为0。 */
+.flex-order1 { 
+	-webkit-order: 1;  	 	/* Chrome */  
+	-ms-flex-order: 1;    		/* IE 10 */  
+	order: 1;    			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-box-ordinal-group: 1; /* OLD - iOS 6-, Safari 3.1-6 */ 
+	-moz-box-ordinal-group: 1; /* OLD - Firefox 19- */
+}
+
+/* 换行 */
 .flex-wrap { 
 	-webkit-flex-wrap:wrap;
 	-moz-flex-wrap: wrap; 
@@ -193,8 +247,9 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	-moz-justify-content: flex-start;
 	-ms-justify-content: flex-start;
 	justify-content: flex-start;
-	-moz-box-pack: start; /*Firefox*/
 	-webkit-box-pack: start; /*Safari,Opera,Chrome*/
+	-moz-box-pack: start; /*Firefox*/
+	-ms-flex-pack: start;
 	box-pack: start;
 }
 .flex-juce { 
@@ -204,9 +259,18 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	justify-content: center;
 	-webkit-box-pack: center; /*Safari,Opera,Chrome*/
 	-moz-box-pack: center; /*Firefox*/
+	-ms-flex-pack: center;
 	box-pack: center;
 }
-.flex-juar { -webkit-justify-content: space-around; -ms-justify-content: space-around; justify-content: space-around;}
+.flex-juar { 
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-box-pack: distribute; /*Safari,Opera,Chrome*/
+	-moz-box-pack: distribute; /*Firefox*/
+	-ms-flex-pack: distribute;
+	box-pack: distribute;	
+}
 .flex-jube {
 	-webkit-justify-content: space-between;
 	-moz-justify-content: space-between;
@@ -214,6 +278,7 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	justify-content: space-between;
 	-webkit-box-pack: justify; /*Safari,Opera,Chrome*/
 	-moz-box-pack: justify; /*Firefox*/
+	-ms-flex-pack: justify;
 	box-pack: justify;
 }
 .flex-juen { 
@@ -223,6 +288,7 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	justify-content: flex-end;
 	-webkit-box-pack: end; /*Safari,Opera,Chrome*/
 	-moz-box-pack: end; /*Firefox*/
+	-ms-flex-pack: end;
 	box-pack: end;
 }
 /*交叉轴 对齐方式 flex-start | flex-end | center | baseline | stretch（默认值）*/
@@ -233,6 +299,7 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	align-items: flex-start;
 	-webkit-box-align: start; /*Safari,Opera,Chrome*/
 	-moz-box-align: start; /*Firefox*/
+	-ms-flex-align: start;
 	box-align: start;
 }
 .flex-itce { 
@@ -242,6 +309,7 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	align-items: center;
 	-webkit-box-align: center; /*Safari,Opera,Chrome*/
 	-moz-box-align: center; /*Firefox*/
+	-ms-flex-align: center;
 	box-align: center;
 }
 .flex-itar { -webkit-align-items: space-around; -ms-align-items: space-around; align-items: space-around;}
@@ -253,6 +321,7 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	align-items: flex-end;
 	-webkit-box-align: end; /*Safari,Opera,Chrome*/
 	-moz-box-align: end; /*Firefox*/
+	-ms-flex-align: end;
 	box-align: end;
 }
 
@@ -261,6 +330,14 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 .flex-coce { -webkit-align-content: center; -ms-align-content: center; align-content: center;}
 .flex-coar { -webkit-align-content: space-around; -ms-align-content: space-around; align-content: space-around;}
 .flex-cobe { -webkit-align-content: space-between; -ms-align-content: space-between; align-content: space-between;}
+
+/*子元素单独对齐方式 */
+.flex-sfst {-webkit-ailgn-self:flex-start;-moz-align-self:flex-start;align-self:flex-start;}
+.flex-sfend {-webkit-ailgn-self: flex-end;-moz-align-self: flex-end;align-self: flex-end;}
+.flex-sfce {-webkit-ailgn-self: center;-moz-align-self:center;align-self: center;}
+.flex-sfba {-webkit-ailgn-self: baseline;-moz-align-self: baseline ;align-self: baseline ;}
+.flex-sfch {-webkit-ailgn-self: stretch;-moz-align-self: stretch;align-self: stretch;}
+
 
 
 .h0 {height: 0;}.h1 {height: 10%;}.h2 {height: 20%;}.h3 {height: 30%;}.h4 {height: 40%;}.h5 {height: 50%;}.h6 {height: 60%;}.h7 {height: 70%;}.h8 {height: 80%;}.h9 {height: 90%;}.h10 {height: 100%;}.hau {height: auto !important;}
@@ -309,19 +386,15 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 
 .bgcl {
     /*css3 背景渐变*/
-    background: -webkit-linear-gradient(180deg, #11b4fb, #006597);
-    /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(180deg, #11b4fb, #006597);
-    /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(180deg, #11b4fb, #006597);
-    /* Firefox 3.6 - 15 */
-    background: linear-gradient(180deg, #11b4fb, #006597);
-    /* 标准的语法 */
+    background: -webkit-linear-gradient(180deg, #11b4fb, #006597);  /* Safari 5.1 - 6.0 */
+    background: -moz-linear-gradient(180deg, #11b4fb, #006597);  /* Firefox 3.6 - 15 */
+    background: -o-linear-gradient(180deg, #11b4fb, #006597);  /* Opera 11.1 - 12.0 */
+    background: linear-gradient(180deg, #11b4fb, #006597);  /* 标准的语法 */
 }
 /*primary*/
 .bgcb {background-color: #007bff !important;}
 .bgcp {background-color: #6f42c1 !important;}
-.bgcf {background-color: #fff !important;}
+.bgcf {background-color: #ffffff !important;}
 .bgcg {background-color: #6c757d !important;}
 
 
@@ -390,8 +463,11 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 	text-overflow:ellipsis;
 	word-break:break-all;
 	-webkit-box-orient:vertical;
+	-moz-box-orient: vertical;
 	/* white-space:nowrap; */
 	-webkit-line-clamp:1;
+	-moz-line-clamp:1;
+	line-clamp:1;
 }
 .lin1 {-webkit-line-clamp:1;}
 .lin2 {-webkit-line-clamp:2;}
@@ -400,8 +476,8 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 .lin5 {-webkit-line-clamp:5;}
 
 .box-b {
-	-moz-box-sizing:border-box; /* Firefox */
 	-webkit-box-sizing:border-box; /* Safari */
+	-moz-box-sizing:border-box; /* Firefox */
 	box-sizing:border-box;
 }
 .trans3 {
@@ -442,24 +518,25 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
      box-shadow:  0 2px 8px 1px rgba(0,0,0,.35);
 }
 
-.bdra0 {border-radius: 0 !important;}
-.bdra2 {border-radius: 2px;}
-.bdra3 {border-radius: 3px;}
-.bdra4 {border-radius: 4px;}
-.bdra5 {border-radius: 5px;}
-.bdra6 {border-radius: 6px;}
-.bdra8 {border-radius: 8px;}
-.bdra10 {border-radius: 10px;}
-.bdra12 {border-radius: 12px;}
-.bdra14 {border-radius: 14px;}
-.bdra15 {border-radius: 15px;}
-.bdra18 {border-radius: 18px;}
-.bdra20 {border-radius: 20px;}
-.bdra22 {border-radius: 22px;}
-.bdra24 {border-radius: 24px;}
-.bdra25 {border-radius: 25px;}
-.bdra50 {border-radius: 50%;}
+.bdra0 {-webkit-border-radius: 0 !important;-moz-border-radius: 0 !important;border-radius: 0 !important;}
+.bdra2 {-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.bdra3 {-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.bdra4 {-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.bdra5 {-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.bdra6 {-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.bdra8 {-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;}
+.bdra10 {-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+.bdra12 {-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;}
+.bdra14 {-webkit-border-radius: 14px;-moz-border-radius: 14px;border-radius: 14px;}
+.bdra15 {-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;}
+.bdra18 {-webkit-border-radius: 18px;-moz-border-radius: 18px;border-radius: 18px;}
+.bdra20 {-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;}
+.bdra22 {-webkit-border-radius: 22px;-moz-border-radius: 22px;border-radius: 22px;}
+.bdra24 {-webkit-border-radius: 24px;-moz-border-radius: 24px;border-radius: 24px;}
+.bdra25 {-webkit-border-radius: 25px;-moz-border-radius: 25px;border-radius: 25px;}
+.bdra50 {-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
 
+/* 媒体查询 */
 @media screen and (min-width:300px) and (max-width:360px) {}
 
 

@@ -38,8 +38,11 @@
 	text-overflow:ellipsis;
 	word-break:break-all;
 	-webkit-box-orient:vertical;
+	-moz-box-orient: vertical;
 	/* white-space:nowrap; */
-	-webkit-line-clamp: @line;
+	-webkit-line-clamp:@line;
+	-moz-line-clamp:@line;
+	line-clamp:@line;
 }
 
 // border-radius
@@ -56,8 +59,8 @@
 .flex { display: -webkit-box;   display: -webkit-flex;  display: -ms-flexbox;  display: flex; }
 .flex-vertical { -webkit-box-orient: vertical;-webkit-flex-flow: column;flex-flow: column;}
 .flex-f(@flex: 1) { -webkit-flex: @flex; -ms-flex: @flex; flex: @flex;}
-.order(@order: 1) { -webkit-flex: @order;-ms-flex-order: @order; -ms-flex: @order; flex: @order;}
-.flex-wrap { -webkit-box-lines: multiple;-moz-box-lines: multiple;-webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;}
+.flex-order(@order: 1) { -webkit-flex: @order;-ms-flex-order: @order; -ms-flex: @order; flex: @order;}
+.flex-wrap { -webkit-flex-wrap:wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap:wrap;-webkit-box-lines: multiple;-moz-box-lines: multiple;box-lines:multiple;}
 
 /*主轴 对齐方式  flex-start（默认值） | flex-end | center | space-between | space-around*/ 
 .flex-ju(@justify-content: space-between) { -webkit-justify-content: @justify-content; -ms-justify-content: @justify-content; justify-content: @justify-content;}
