@@ -340,11 +340,11 @@ img,audio,video,canvas {display: inline-block;max-width: 100%;}
 .flex-cobe { -webkit-align-content: space-between; -ms-align-content: space-between; align-content: space-between;}
 
 /*子元素单独对齐方式 */
-.flex-sfst {-webkit-ailgn-self:flex-start;-moz-align-self:flex-start;align-self:flex-start;}
-.flex-sfend {-webkit-ailgn-self: flex-end;-moz-align-self: flex-end;align-self: flex-end;}
-.flex-sfce {-webkit-ailgn-self: center;-moz-align-self:center;align-self: center;}
-.flex-sfba {-webkit-ailgn-self: baseline;-moz-align-self: baseline ;align-self: baseline ;}
-.flex-sfch {-webkit-ailgn-self: stretch;-moz-align-self: stretch;align-self: stretch;}
+.flex-sfst {-webkit-align-self:flex-start;-moz-align-self:flex-start;align-self:flex-start;}
+.flex-sfend {-webkit-align-self: flex-end;-moz-align-self: flex-end;align-self: flex-end;}
+.flex-sfce {-webkit-align-self: center;-moz-align-self:center;align-self: center;}
+.flex-sfba {-webkit-align-self: baseline;-moz-align-self: baseline ;align-self: baseline ;}
+.flex-sfch {-webkit-align-self: stretch;-moz-align-self: stretch;align-self: stretch;}
 
 
 
