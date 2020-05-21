@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>骰子点数布局</title>
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		<style type="text/css">
+			.touzi {
+				width: 100px;
+				height: 100px;
+				background-color: #fff;
+				border: 1px solid #28A745;
+				border-radius:20px;
+				margin: 20px;
+				padding: 10px;
+
+			}
+			.touziBox {
+				display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+				
+				display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+				display: -moz-flex;
+				display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+				
+				display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+				display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+				display: flexbox;
+				display: box;           /* OLD - Android 4.4- */ 
+			}
+
+			.num {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background-color: brown;
+				display: inline;
+				color: #fff;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 700;
+
+
+			}
+
+			.num.big {
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 20px;
+			}
+			
+			.box {padding: 20px;border-bottom: 1px solid #6c757d;}
+		</style>
+	</head>
+	<body>
+		<div class="container p50">
+			<div class="box box1">
+				<h1>1个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-juce flex-itce">
+						<p class="num num1 big">1</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="box box2">
+				<h1>2个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-jube ">
+						<p class="num num1">1</p>
+						<p class="num num2 flex-sfend">2</p>
+
+					</div>
+					<div class="touzi flex flex-jube ">
+						<p class="num num1 flex-sfend">1</p>
+						<p class="num num2">2</p>
+					
+					</div>
+					<div class="touzi flex flex-jube flex-vertical">
+						<p class="num num1 flex-sfend">1</p>
+						<p class="num num2">2</p>
+					
+					</div>
+				</div>
+			</div>
+			<div class="box box3">
+				<h1>3个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-jube ">
+						<p class="num num1">1</p>
+						<p class="num num2 flex-sfce">2</p>
+						<p class="num num3 flex-sfend">3</p>
+
+					</div>
+					<div class="touzi flex flex-jube ">
+						<p class="num num1 flex-sfend">1</p>
+						<p class="num num2 flex-sfce">2</p>
+						<p class="num num3">3</p>
+					
+					</div>
+					<div class="touzi flex flex-jube flex-vertical">
+						<p class="num num1 flex-sfend">1</p>
+						<p class="num num2 flex-sfce">2</p>
+						<p class="num num3">3</p>
+					
+					</div>
+				</div>
+			</div>
+
+
+			<div class="box box4">
+				<h1>4个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-jube flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="w10 h0"></p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+
+					</div>
+					<div class="touzi flex flex-jube flex-vertical flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="h10 w0"></p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+					
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="box box5">
+				<h1>5个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-jube flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="w10 h0"></p>
+						<p class="num num3 mlA mrA">3</p>
+						<p class="w10 h0"></p>
+						<p class="num num4">4</p>
+						<p class="num num5">5</p>
+
+					</div>
+					<div class="touzi flex flex-jube flex-vertical flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="h10 w0"></p>
+						<p class="num num3 mtA mbA">3</p>
+						<p class="h10 w0"></p>
+						<p class="num num4">4</p>
+						<p class="num num5">5</p>
+					
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="box box6">
+				<h1>6个点数</h1>
+				<div class="touziBox">
+					<div class="touzi flex flex-jube flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+						<p class="num num5">5</p>
+						<p class="num num6">6</p>
+					</div>
+					<div class="touzi flex flex-jube flex-vertical flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="h10 w0"></p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+						<p class="h10 w0"></p>
+						<p class="num num5">5</p>
+						<p class="num num6">6</p>
+					</div>
+					<div class="touzi flex flex-jube flex-vertical flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+						<p class="num num5">5</p>
+						<p class="num num6">6</p>
+					</div>
+					<div class="touzi flex flex-jube flex-wrap flex-cobe">
+						<p class="num num1">1</p>
+						<p class="num num2">2</p>
+						<p class="w10 h0"></p>
+						<p class="num num3">3</p>
+						<p class="num num4">4</p>
+						<p class="w10 h0"></p>
+						<p class="num num5">5</p>
+						<p class="num num6">6</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
