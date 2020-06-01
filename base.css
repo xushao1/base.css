@@ -23,6 +23,17 @@ input[type="number"]{-moz-appearance: textfield;}
 	-ms-user-select: none;
 	user-select: none;
 }
+/* 灰色蒙层，纪念已逝先人时效果 */
+.grayscale {
+	filter: url("data:image/svg+xml;utf8,#grayscale"); 
+	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+	-webkit-filter: grayscale(1);
+	-webkit-filter: grayscale(100%); 
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
+	filter: grayscale(100%); 
+}
 
 ol,ul {list-style: none}
 
