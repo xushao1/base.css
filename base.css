@@ -23,6 +23,7 @@ input[type="number"]{-moz-appearance: textfield;}
 	-ms-user-select: none;
 	user-select: none;
 }
+
 /* 灰色蒙层，纪念已逝先人时效果 */
 .grayscale {
 	filter: url("data:image/svg+xml;utf8,#grayscale"); 
@@ -34,6 +35,15 @@ input[type="number"]{-moz-appearance: textfield;}
 	-o-filter: grayscale(100%); 
 	filter: grayscale(100%); 
 }
+
+/* 去掉默认滚动条 */
+.noscrollBar::-webkit-scrollbar{
+	width:0;
+	height:0;
+	color:transparent;
+	display:none;
+}
+
 
 ol,ul {list-style: none}
 
